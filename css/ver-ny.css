@@ -123,6 +123,7 @@ input[type=checkbox] {
     animation: FadeIn;
     animation-duration: 1s;
     animation-timing-function: ease-in;
+    color: black;
 }
 
 .homeLink {
