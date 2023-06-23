@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: teal;
+    font-family: 'Poppins';
+}
+
+section {
+    animation: FadeIn 1s ease-in
+}
+
+.hide {
+    display: none;
+}
+
+.packTitle {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    text-decoration: underline;
+}
+
+.packDesc {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+}
+
+.callout {
+    background-color: rgb(5, 191, 191);
+    margin: 10px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 4px solid black;
+}
+
+.checkList {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    font-family: 'Rubik';
+    list-style: none;
+    gap: 10px;
+}
+
+.checkItem {
+    display: flex;
+    align-items: center;
+}
+
+/* Checkbox Styles */
+input[type=checkbox] {
+    position: relative;
+    display: none;
+}
+.checkbox-label {
+  display:inline-block;
+  position:relative;
+  width:20px;
+  height:20px;
+  border-radius:2px;
+  background:#eaeaea;
+  cursor:pointer;
+  vertical-align:middle;
+  transition:0.35s ease all;
+}
+
+.checkbox-label:hover {
+    background:#e2e1e1;
+  }
+  .checkbox-label:before {
+    content:'';
+    position:absolute;
+    top:6px;
+    left:2px;
+    border-bottom:3px solid transparent;
+    border-right:3px solid transparent;
+    transform:rotate(45deg);
+    transform-origin:0% 100%;   
+  }
+  input[type="checkbox"]:checked + .checkbox-label:before {
+    animation:DrawCheckMark 0.15s ease-in-out 0.15s;
+    animation-fill-mode:forwards;
+  }
+  input[type="checkbox"]:checked + .checkbox-label {
+    background-color:#4CAF50;
+  }
+
+  .labelText {
+    width: fit-content;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+
+  .finishText {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    animation: FadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+  }
+
+  .nextBtn, .resetData {
+    font-size: 1rem;
+    display: block;
+    margin: 0 auto;
+    background-color: #EE7294;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    animation: FadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+.homeLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.btmMargin {
+  margin-bottom: 35px;
+  padding: 5px;
+}
+
+.packlist-badge > img {
+  width: 90vw;
+  border-radius: 999px;
+}
+
+.packlist-badge {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+  /* Draw mark animation */
+@keyframes DrawCheckMark {
+    0% {
+      width:0px;
+      height:0px;
+      /*border-bottom:3px solid white;*/
+      transform:translate(0,0) rotate(45deg);
+    }
+    50% {
+      width:7px;
+      height:0px; 
+      border-bottom:3px solid white;
+      transform:translate(0,0) rotate(45deg);
+    }
+    100% {
+     width:7px;
+     height:14px;
+     border-bottom:3px solid white;
+     border-right:3px solid white;
+     transform:translate(0,-15px) rotate(45deg);
+   }
+  }
+
+
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}

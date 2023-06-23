@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: teal;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+    animation-name: GrowIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    width:100%;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    border: black 3px solid;
+    border-radius: 15px;
+    background-color: #EE7294;
+    animation: FadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+li > p {
+    flex-grow: 1;
+    padding: 4px;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+li > img {
+    flex-grow: 1;
+    height: 100%;
+    border-radius: 10px;
+    border-left: black 3px solid;
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes GrowIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes Bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    10% {
+        transform: translateY(10px)
+    }
+    20% {
+        transform: translateY(0px)
+    }
+    30% {
+        transform: translateY(10px)
+    }
+    40% {
+        transform: translateY(0px)
+    }
+    50% {
+        transform: translateY(10px)
+    }
+    60% {
+        transform: translateY(0px)
+    }
+    70% {
+        transform: translateY(10px)
+    }
+    80% {
+        transform: translateY(0px)
+    }
+    90% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+
+}
